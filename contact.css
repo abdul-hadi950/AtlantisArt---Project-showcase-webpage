@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+.container{
+    padding: 10px 10%;
+    
+    
+}
+.contact{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    display: flex;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left a {
+    margin-top: 30px;
+    text-decoration: none;
+    color: #383838;
+}
+.contact-left p {
+    margin-top: 20px;
+    color: #383838;
+}
+.contact-left p i{
+    color: #063690;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.fa-solid.fa-envelope{
+    color: #063690;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.social-icons{
+    margin-top: 0px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 15px;
+    color: #383838;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #063690;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    color: #e5e5e5;
+    display: inline-block;
+    background-color: #063690;
+}
+.btn.btn2:hover{
+    color: #e5e5e5;
+    display: inline-block;
+    background: #0e131b;
+    box-shadow: #063690;
+}
+.contact-right form{
+    width: 100%;
+
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #e5e5e5;
+    padding: 15px;
+    margin: 15px 0;
+    color: #0e131b;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}

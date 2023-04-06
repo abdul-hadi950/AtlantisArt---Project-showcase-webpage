@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+html{
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    padding: 100px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+section::-webkit-scrollbar {
+    display: none;
+}
+.about-home{
+    position: relative;
+    width: 100%;
+    background:rgb(43, 43, 43);
+    
+}
+
+
+.about-home .background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 888;
+    position: fixed;
+    width: 1000px;
+    height: 1000px; 
+    opacity: 0.1; 
+    top: -150px;
+}
+
+.about-home .background img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.about-container{
+    
+    width: 100%;
+    margin-right: 50px;
+    padding: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    text-align:center;
+}
+.about-container .about-head {
+    z-index: 999;
+    position: relative;
+    
+    
+}
+.about-container .about-head h1{
+    padding-top: 50px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 110px;
+    letter-spacing: 25px;
+    line-height: 150px;
+    color: transparent;
+    opacity: 0.25;
+    text-align: left;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    
+}
+.about-container .about-description{
+    
+    position: relative;
+    width: 900px;
+    min-height: 100px;
+    font-size: 17px;
+    color: #fff;
+}
+.our-clients{
+    top: 0px;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background:rgb(43, 43, 43);
+    transition: 0.3s ease;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+ 
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+.clients-head{
+    
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    left: 00px;
+}
+.clients-head h1{
+    margin-left: 50px;
+    line-height: 300px;
+    font-size: 250px;
+    color: #fff;
+    opacity: 0.15;
+}
+
+.client-logo{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.281);
+    position: absolute;
+    top: 0;
+    
+}
+
+
+@media(max-width: 1040px){
+    
+    section{
+        width: 100%;
+    }
+    .about-home{
+        width: 100%;
+        padding: 10px;
+        background:rgb(43, 43, 43);
+        
+    }
+    
+    
+    
+    .about-container .about-head h1{
+        top: 100px;
+    }
+    .about-container .about-description{
+        font-size: 13px;
+        color: #fff;
+    }
+    
+    .clients-head h1{
+        line-height: 250px;
+        font-size: 200px;
+        
+    }
+}

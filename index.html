@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>The AtlantisArt</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class='logo'><span class="a"> <img src="./assets/atlantis-art-Recovered2.png" alt=""></a>
+        <div class="menu-btn">
+
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="explore.html">Explore</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home" id="Home">
+        <img class="img-slide active" src="./assets/main_bg.png">
+        <img class="img-slide" src="./assets/hotel.png">
+        <img class="img-slide" src="./assets/kitchen.png">
+        <img class="img-slide" src="./assets/bedroom.png">
+        <img class="img-slide" src="./assets/restuarant.png">
+        <div class="content active">
+            <a class="head" href="#">THE ATLANTISART</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quae dolorem ratione</p>
+            <div class="butn">
+                <a href="#" class="btn">See More</a>
+                <a href="#" class="btn">See More</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <a class="head" href="#">HOTEL</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quae dolorem ratione</p>
+            
+        </div>
+
+        <div class="content">
+            <a class="head" href="#">KITCHEN</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quae dolorem ratione</p>
+            
+        </div>
+
+        <div class="content">
+            <a class="head" href="#">BEDROOM</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quae dolorem ratione</p>
+            
+        </div>
+
+        <div class="content">
+            <a class="head" href="#">RESTUARANT</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quae dolorem ratione</p>
+            
+        </div>
+
+        
+        <div class="media-icon">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+
+        //nav bar
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        //slider
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".img-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+
+        // slider autoplay
+        
+        var playslider;
+        const numberOfSlides = slides.length;
+        var slideNumber = 0;
+        var repeater = () => {
+            playslider = setInterval(function(){
+                btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            });
+
+            slideNumber++;
+
+            if(slideNumber > (numberOfSlides - 1)){
+                slideNumber = 0;
+            }
+
+            btns[slideNumber].classList.add("active");
+            slides[slideNumber].classList.add("active");
+            contents[slideNumber].classList.add("active");
+            },5000);
+        }
+        repeater()
+
+    </script>
+</body>
+</html>

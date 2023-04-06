@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="explore.css">
+    
+    <title>The AtlantisArt</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class='logo'><img src="./assets/atlantis-art-Recovered2.png"></a>
+        <div class="menu-btn">
+
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="explore.html">Explore</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="explore-home" id="Home">
+        <div class="explore">
+            <div class="explore-hotel">
+                <a href="index.html"><img src="./assets/hotel.png" alt=""></a>
+                <div class="heading">
+                    <a class="explore-head" href="#">HOTEL</a>
+                </div>
+            </div>
+            <div class="explore-restuarent">
+                <a href="index.html"><img src="./assets/restuarant.png" alt=""></a>
+                <div class="heading">
+                    <a class="explore-head" href="#">RESTUARENT</a>
+                </div>
+            </div>
+            <div class="explore-bedroom">
+                <a href="index.html"><img src="./assets/bedroom.png" alt=""></a>
+                <div class="heading">
+                    <a class="explore-head" href="#">BEDROOM</a>
+                </div>
+            </div>
+            <div class="explore-kitchen">
+                <a href="index.html"><img src="./assets/kitchen.png" alt=""></a>
+                <div class="heading">
+                    <a class="explore-head" href="#">KITCHEN</a>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        
+        
+        
+    </section>
+
+    <script type="text/javascript">
+
+        //nav bar
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        
+
+    </script>
+</body>
+</html>

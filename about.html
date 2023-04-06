@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    
+    <title>The AtlantisArt</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class='logo'> <img src="./assets/atlantis-art-Recovered2.png" alt=""></a>
+        <div class="menu-btn">
+
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="explore.html">Explore</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-home " id="About">
+    
+        <div class="background"><img src="./assets/atlantis-art-Recovered2.png" alt=""></div>
+        <div class="about-container">   
+            <div class="about-head">
+                <h1>About </h1>
+            </div>
+            <div class="about-description">
+                <p>Lorem ipsum dolor sit amet consectetur adip Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium repellat harum perferendis fugit maiores eum, facilis laudantium fuga, incidunt voluptates autem quasi. Veniam quasi sint deleniti, possimus iste eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sit sed reiciendis eligendi facilis repellendus vero voluptatem magnam, impedit odit. Aut modi porro doloribus quibusdam quasi dignissimos nobis maiores minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, amet? Esse dolores sit error, voluptatibus maxime veritatis laborum a quia molestiae temporibus, ut et. Cumque adipisci reiciendis delectus maxime illum.</p>
+            </div>
+
+        </div> 
+
+    </section>
+
+    <section class="our-clients" id="clients">
+        <div class="clients reveal">
+            <div class="container">
+                <div class="clients-head">
+                    <h1>Our Clients</h1>
+                    <div class="client-logo">
+                        <div class="logo1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+    <script type="text/javascript">
+
+        //nav bar
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+
+        //client reveal
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                  reveals[i].classList.add("active");
+                } else {
+                  reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>

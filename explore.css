@@ -1,0 +1,183 @@
+.explore-home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(43, 43, 43);
+    
+}
+
+.explore-home::before{
+    z-index: 666;
+    content: '';
+    position: absolute;
+    background: #292929c9;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.explore{
+    z-index: 777;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    
+    position: relative;
+    
+}
+.explore-hotel{
+    width: 50%;
+    height: 100vh;
+    background-image: cover;
+    background-color: rgb(43, 43, 43);
+}
+.explore-hotel img{
+    z-index: 777;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(43, 43, 43);
+    transition: 0.3s;
+    opacity: 0.5;
+}
+.explore-hotel img:hover{
+    transition: 0.3s ease-in-out;
+    
+    transform: scale(1.1);
+}
+.explore-restuarent{
+    width: 50%;
+    height: 100vh;
+    background-image: cover;
+    background-color: rgb(43, 43, 43);
+}
+.explore-restuarent img{
+    z-index: 777;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(43, 43, 43);
+    transition: 0.3s;
+    opacity: 0.5;
+}
+.explore-restuarent img:hover{
+    transition: 0.3s ease-in-out;
+    
+    transform: scale(1.1);
+}
+
+.explore-bedroom{
+    width: 50%;
+    height: 100vh;
+    background-image: cover;
+    background-color: rgb(43, 43, 43);
+}
+.explore-bedroom img{
+    z-index: 777;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(43, 43, 43);
+    transition: 0.3s;
+    opacity: 0.5;
+}
+.explore-bedroom img:hover{
+    transition: 0.3s ease-in-out;
+    
+    transform: scale(1.1);
+}
+.explore-kitchen{
+    width: 50%;
+    height: 100vh;
+    background-image: cover;
+    background-color: rgb(77, 77, 77);
+}
+.explore-kitchen img{
+    z-index: 777;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(43, 43, 43);
+    transition: 0.3s;
+    opacity: 0.5;
+}
+.explore-kitchen img:hover{
+    transition: 0.3s ease-in-out;
+    
+    transform: scale(1.1);
+}
+
+.heading{
+
+    z-index: 999;
+    position: relative;
+    top: -50%;
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+
+}
+.explore-head{
+    font-size: 35px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #ffff;
+}
+
+
+@media(max-width:1040px){
+    .explore{
+        transform: skew(0deg);
+        flex-direction: column;
+        width: 100%;
+        
+        margin: 0;
+        padding: 0;
+        
+    }
+    .explore-hotel{
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+    }
+    
+    .explore-restuarent{
+        width:100%;
+        height: 100vh;
+        background-color: rgb(105, 34, 34);
+    }
+    .explore-bedroom{
+        width:100%;
+        height: 100vh;
+        background-color: rgb(225, 0, 255);
+    }
+    .explore-kitchen{
+        width:100%;
+        height: 100vh;
+        background-color: rgb(72, 255, 0);
+    }
+}
